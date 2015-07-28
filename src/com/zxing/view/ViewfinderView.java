@@ -109,14 +109,14 @@ public final class ViewfinderView extends View {
 		} else {
 			// 画方框四角
 			paint.setColor(getResources().getColor(R.color.red_f9));
-			canvas.drawRect(frame.left, frame.top, frame.left + 15, frame.top + 5, paint);
-			canvas.drawRect(frame.left, frame.top, frame.left + 5, frame.top + 15, paint);
-			canvas.drawRect(frame.right - 15, frame.top, frame.right, frame.top + 5, paint);
-			canvas.drawRect(frame.right - 5, frame.top, frame.right, frame.top + 15, paint);
-			canvas.drawRect(frame.left, frame.bottom - 5, frame.left + 15, frame.bottom, paint);
-			canvas.drawRect(frame.left, frame.bottom - 15, frame.left + 5, frame.bottom, paint);
-			canvas.drawRect(frame.right - 15, frame.bottom - 5, frame.right, frame.bottom, paint);
-			canvas.drawRect(frame.right - 5, frame.bottom - 15, frame.right, frame.bottom, paint);
+			canvas.drawRect(frame.left, frame.top, frame.left + 60, frame.top + 5, paint);
+			canvas.drawRect(frame.left, frame.top, frame.left + 5, frame.top + 60, paint);
+			canvas.drawRect(frame.right - 60, frame.top, frame.right, frame.top + 5, paint);
+			canvas.drawRect(frame.right - 5, frame.top, frame.right, frame.top + 60, paint);
+			canvas.drawRect(frame.left, frame.bottom - 5, frame.left + 60, frame.bottom, paint);
+			canvas.drawRect(frame.left, frame.bottom - 60, frame.left + 5, frame.bottom, paint);
+			canvas.drawRect(frame.right - 60, frame.bottom - 5, frame.right, frame.bottom, paint);
+			canvas.drawRect(frame.right - 5, frame.bottom - 60, frame.right, frame.bottom, paint);
 			// 画扫描线
 			paint.setColor(getResources().getColor(R.color.red_f9));
 			paint.setAlpha(SCANNER_ALPHA[scannerAlpha]);

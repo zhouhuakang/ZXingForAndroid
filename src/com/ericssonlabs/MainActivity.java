@@ -16,7 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class BarCodeTestActivity extends Activity {
+public class MainActivity extends Activity {
     /** Called when the activity is first created. */
 	private TextView resultTextView;
 	private EditText qrStrEditText;
@@ -37,7 +37,7 @@ public class BarCodeTestActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				//打开扫描界面扫描条形码或二维码
-				Intent openCameraIntent = new Intent(BarCodeTestActivity.this,CaptureActivity.class);
+				Intent openCameraIntent = new Intent(MainActivity.this,CaptureActivity.class);
 				startActivityForResult(openCameraIntent, 0);
 			}
 		});
@@ -54,7 +54,7 @@ public class BarCodeTestActivity extends Activity {
 						Bitmap qrCodeBitmap = EncodingHandler.createQRCode(contentString, 350);
 						qrImgImageView.setImageBitmap(qrCodeBitmap);
 					}else {
-						Toast.makeText(BarCodeTestActivity.this, "Text can not be empty", Toast.LENGTH_SHORT).show();
+						Toast.makeText(MainActivity.this, "Text can not be empty", Toast.LENGTH_SHORT).show();
 					}
 					
 				} catch (WriterException e) {
